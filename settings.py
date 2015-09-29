@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+import os
+
+from aldryn_addons.utils import boolean_ish
+
 
 INSTALLED_ADDONS = [
     # <INSTALLED_ADDONS>  # Warning: this is auto-generated. Manual changes will be overwritten.
@@ -8,7 +12,11 @@ INSTALLED_ADDONS = [
 ]
 
 import aldryn_addons.settings
-aldryn_addons.settings.load(locals())
+
+aldryn_addons.settings.load(
+    settings=locals(),
+    debug=boolean_ish(os.environ.get('ALDRYN_ADDONS_DEBUG', False))
+)
 
 
 # all django settings can be altered here
