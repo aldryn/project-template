@@ -1,5 +1,5 @@
 # This is a fairly standard Django settings file, with some special additions
-# that allow addon applications to auto-configure themselves. If it looks 
+# that allow addon applications to auto-configure themselves. If it looks
 # unfamiliar, please see our documentation:
 #
 #   http://docs.divio.com/en/latest/reference/configuration-settings-file.html
@@ -8,16 +8,15 @@
 
 
 # INSTALLED_ADDONS is a list of self-configuring Divio Cloud addons - see the
-# Addons view in your project's dashboard. See also the addons directory in 
+# Addons view in your project's dashboard. See also the addons directory in
 # this project, and the INSTALLED_ADDONS section in requirements.in.
 
 INSTALLED_ADDONS = [
     # Important: Items listed inside the next block are auto-generated.
     # Manual changes will be overwritten.
-
     # <INSTALLED_ADDONS>
-    'aldryn-addons',
-    'aldryn-django',
+    "aldryn-addons",
+    "aldryn-django",
     # </INSTALLED_ADDONS>
 ]
 
@@ -31,6 +30,7 @@ INSTALLED_ADDONS = [
 # overwritten, so they should be placed *after* this section.
 
 import aldryn_addons.settings
+
 aldryn_addons.settings.load(locals())
 
 # Your own Django settings can be applied from here on. Key settings like
@@ -41,10 +41,12 @@ aldryn_addons.settings.load(locals())
 #
 # for guidance on managing these settings.
 
-INSTALLED_APPS.extend([
-    # Extend the INSTALLED_APPS setting by listing additional applications here
-])
+INSTALLED_APPS.extend(
+    [
+        # Extend the INSTALLED_APPS setting by listing additional applications here
+    ]
+)
 
-# To see the settings that have been applied, use the Django diffsettings 
-# management command. 
+# To see the settings that have been applied, use the Django diffsettings
+# management command.
 # See https://docs.divio.com/en/latest/how-to/configure-settings.html#list
