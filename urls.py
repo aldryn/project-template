@@ -1,6 +1,5 @@
-from aldryn_django.utils import i18n_patterns
 import aldryn_addons.urls
-
+from aldryn_django.utils import i18n_patterns
 
 urlpatterns = (
     [

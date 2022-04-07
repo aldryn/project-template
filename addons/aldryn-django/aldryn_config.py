@@ -1,5 +1,6 @@
 import json
 import sys
+
 from aldryn_client import forms
 
 
@@ -8,10 +9,11 @@ class Form(forms.BaseForm):
 
     def to_settings(self, data, settings):
         import os
-        import dj_database_url
         import warnings
-        import yurl
         from functools import partial
+
+        import dj_database_url
+        import yurl
         from aldryn_addons.utils import boolean_ish, djsenv
 
         env = partial(djsenv, settings=settings)
